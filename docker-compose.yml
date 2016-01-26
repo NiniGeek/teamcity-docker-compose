@@ -1,6 +1,6 @@
 teamcity
-  mem_limit 4g
-  image ninigeek/teamcity
+  mem_limit: 4g
+  image: ninigeek/teamcity
   ports:
     - "127.0.0.1:8242:8242"
   volumes:
