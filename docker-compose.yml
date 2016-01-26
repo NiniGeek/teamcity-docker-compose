@@ -1,4 +1,4 @@
-teamcity
+teamcity:
   mem_limit: 4g
   image: ninigeek/teamcity
   ports:
