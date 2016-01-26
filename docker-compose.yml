@@ -1,0 +1,18 @@
+teamcity
+  mem_limit 4g
+  image ninigeek/teamcity
+  ports:
+    - "127.0.0.1:8242:8242"
+  volumes:
+    - ".TeamCity:/var/lib/teamcity"
+  links:
+    - mysql
+mysql:
+  image: mysql
+  volumes:
+    - ".MySQL:/var/lib/mysql"
+  environment:
+    MYSQL_DATABASE: teamcity
+    MYSQL_USER: teamcity
+    MYSQL_PASSWORD: teamcity
+    MYSQL_ALLOW_EMPTY_PASSWORD: yes
